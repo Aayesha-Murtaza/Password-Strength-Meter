@@ -103,9 +103,10 @@ with col1:
         else:
             st.error(response)
         
-        st.write("**Feedback:**")
-        for tip in feedback.split(', '):
-            st.markdown(f"{tip}")
+        if feedback:
+            st.write("**Feedback:**")
+            for tip in feedback.split(', '):
+                st.markdown(f"{tip}")
 
 # Password generator button
 with col2:
