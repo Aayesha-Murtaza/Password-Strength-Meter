@@ -54,7 +54,7 @@ def check_password_strength(password):
     if len(password) >= 8:
         score += WEIGHTS["length"]
     else:
-        feedback.append("❌ Password should be at least 8 characters long")
+        return "❌ Password should be at least 8 characters long"
 
     # Uppercase Check
     if re.search(r"[A-Z]", password):
